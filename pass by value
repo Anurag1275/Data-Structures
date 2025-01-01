@@ -1,0 +1,19 @@
+//Pass by value
+#include<iostream>
+using namespace std;
+
+void passbyref(string s){
+    s[0]='a';
+  cout<<s<<endl;
+}
+int main(){
+    string v="VSCODE\n";
+cout<<v;
+passbyref(v);
+return 0;
+
+}
+//Output:VSCODE
+//aSCODE
+
+
