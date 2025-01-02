@@ -1,0 +1,16 @@
+//Difference b/w Callbyref and Callbyvalue
+#include<iostream>
+#include<string>
+using namespace std;
+void passbyref(string &a){ //& is used to pass the address of the variable
+a[0]='a';
+cout<<a<<endl;
+};
+int main(){
+string a="hello";
+passbyref(a);
+cout<<a<<endl;
+
+return 0;
+}
+//a copy is passed to the function and the original value is not changed
