@@ -1,0 +1,44 @@
+//Classes and objects:
+#include<iostream>
+#include<string>
+#include <vector>
+using namespace std;
+
+class CPP{
+//data members
+public:
+string Name;
+int Age;
+vector<string>components;
+//member functions
+void displaydetails(){
+    cout<<"Name: "<<Name<<endl;
+    cout<<"Age: "<<Age<<endl;
+    cout<<"Components: ";
+    for(string component:components){
+        cout<<component<<" ";
+    }
+    cout<<endl;
+}
+
+};
+    
+int main(){    
+    CPP obj1;
+    obj1.Name="Python";
+    obj1.Age=30;
+    obj1.components={"Numpy","Pandas","Matplotlib"};
+
+    obj1.displaydetails();
+
+    CPP obj2;
+    obj2.Name="Java";
+    obj2.Age=25;
+    obj2.components={"JVM","JRE","JDK"};
+
+    obj2.displaydetails();
+
+
+    return 0;
+
+    }
