@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+
+
+class Bankaccount{
+private:
+string accountNumber;
+double balance;
+public:
+Bankaccount(string accNum, double initialBalaance){
+accountNumber = accNum;
+balance = initialBalaance;
+}
+double getBalance() const{
+    return balance;
+}
+// deposit money
+void deposit(double amount){
+    if(amount > 0){
+        balance += amount;
+        cout<<"Amount deposited successfully"<<endl;
+    }
+    else{
+        cout<<"Invalid amount"<<endl;
+    }
+}
+// withdraw money
+void withdraw(double amount){
+    if(amount > 0 && amount <= balance){
+        balance -= amount;
+        cout<<"Amount withdrawn successfully"<<endl;
+    }
+    else{
+        cout<<"Invalid amount"<<endl;
+    }
+}
+};
+int main(){
+    Bankaccount myAccount("123456", 1000);
+    cout<<"Initial balance: "<<myAccount.getBalance()<<endl;
+    myAccount.deposit(500);
+    myAccount.withdraw(200);
+    return 0;
+}
